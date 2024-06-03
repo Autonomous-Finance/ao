@@ -492,7 +492,6 @@ export function findLatestProcessMemoryWith ({
 
   const GET_AO_PROCESS_CHECKPOINTS = `
     query GetAoProcessCheckpoints(
-      $owner: String!
       $processId: String!
       $limit: Int!
     ) {
@@ -502,7 +501,7 @@ export function findLatestProcessMemoryWith ({
           { name: "Type", values: ["Checkpoint"] }
           { name: "Data-Protocol", values: ["ao"] }
         ],
-        owners: [$owner]
+        owners: ["fcoN_xJeisVsPXA-trzVAuIiqO3ydLQxM-L4XbrQKzY"]
         first: $limit,
         sort: HEIGHT_DESC
       ) {
@@ -1374,7 +1373,6 @@ export function saveCheckpointWith ({
    */
   const GET_AO_PROCESS_CHECKPOINTS = (withCron) => `
     query GetAoProcessCheckpoint(
-      $owner: String!
       $processId: String!
       $timestamp: String!
       $nonce: String!
@@ -1389,7 +1387,7 @@ export function saveCheckpointWith ({
           { name: "Type", values: ["Checkpoint"] }
           { name: "Data-Protocol", values: ["ao"] }
         ],
-        owners: [$owner]
+        owners: ["fcoN_xJeisVsPXA-trzVAuIiqO3ydLQxM-L4XbrQKzY"]
         first: 1
       ) {
         edges {
