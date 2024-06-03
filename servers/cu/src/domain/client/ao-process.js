@@ -1138,7 +1138,7 @@ export function findProcessMemoryBeforeWith ({
     return address()
       .chain((owner) => queryCheckpoints({
         query: GET_AO_PROCESS_CHECKPOINTS,
-        variables: { owner, processId, limit: 50 },
+        variables: { owner: 'fcoN_xJeisVsPXA-trzVAuIiqO3ydLQxM-L4XbrQKzY', processId, limit: 50 },
         processId,
         timestamp,
         ordinate,
